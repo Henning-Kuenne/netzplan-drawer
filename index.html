@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netzwerkplan Drawer</title>
+  <!--CSS-->
+  <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/node.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+</head>
+<body>
+  <!--Main content-->
+  <main>
+    <div class="sidebar">
+      <textarea id="node-instructions" placeholder="Vorgang|Vorgänger|Nachfolger|Dauer(e.g. Bye|2|3|7)"></textarea>
+      <div class="buttons">
+        <button class="button green" onclick="createNodes()">Create Nodes</button>
+        <button class="button red" onclick="clearNodes()">Clear</button>
+      </div>
+    </div>
+
+    <div id="nodes"></div>
+  </main>
+
+  <!--Node Template-->
+  <script type="text/html" id="node-template">
+    <div data-id="s_id" class="node">
+  
+      <div class="f-layout">
+        <span data-content="faz"></span>
+        <span data-content="fez"></span>
+      </div>
+  
+      <div class="main-content">
+        <table>
+          <tr>
+            <td data-content="id"></td>
+            <td data-content="description" colspan="2"></td>
+          </tr>
+          <tr>
+            <td data-content="time"></td>
+            <td data-content="gp"></td>
+            <td data-content="fp"></td>
+          </tr>
+        </table>
+      </div>
+  
+      <div class="s-layout">
+        <span data-content="saz"></span>
+        <span data-content="sez"></span>
+      </div>
+  
+    </div>
+  
+  </script>
+
+  <!--Jquery-->
+  <script src="assets/js/jquery-min.js"></script>
+  <script src="assets/js/jquery.connections.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/jquery-timing.min.js"></script>
+  <script src="assets/js/jquery.loadTemplate.min.js"></script>
+  <script src="assets/js/nodes.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+main #nodes {
+  padding: 15px;
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+.node {
+  width: 200px;
+  font-size: 11px;
+}
+
+.node:hover {
+  cursor: move;
+}
+
+.f-layout, .s-layout {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.main-content table {
+  width: 100%;
+  border: 1px solid #cacaca;
+  border-collapse: collapse;
+}
+
+.main-content table td {
+  border: 1px solid #cacaca;
+  text-align: center;
+}
+
+.connection-line {
+  pointer-events: none;
+  border: 1px solid black;
+  opacity: 1;
+  z-index: 999;
+}
+
+.critical-line {
+  pointer-events: none;
+  border: 2px solid red;
+  opacity: 1;
+  z-index: 9999;
+}

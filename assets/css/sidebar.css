@@ -1,0 +1,43 @@
+.sidebar {
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: column;
+  min-width: 300px;
+  height: 100%;
+}
+
+.sidebar textarea {
+  flex-grow: 1;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.buttons button {
+  flex-grow: 1;
+}
+
+.button {
+  transition: background-color 0.2s;
+  transition: border-color 0.1s;
+  background: white;
+  color: black;
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5px 10px;
+  padding: 5px 15px;
+}
+
+.button.red:hover {
+  background-color: tomato;
+  border-color: orangered;
+}
+
+.button.green:hover {
+  background-color: #00cc6d;
+  border-color: green;
+}
