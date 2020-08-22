@@ -1,4 +1,4 @@
-# Netzwerkplan Drawer
+# Netzplan Drawer
 
 ## Features
 - Bewegbare Knoten
